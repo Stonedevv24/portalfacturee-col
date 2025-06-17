@@ -2,65 +2,160 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Información sobre Aire Acondicionado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aire Acondicionado Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f7f9;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(120deg, #e0f7fa, #ffffff);
             color: #333;
         }
+
         header {
-            background-color: #008cba;
-            padding: 20px;
+            background-color: #007acc;
+            padding: 30px;
             color: white;
             text-align: center;
+            animation: fadeIn 2s ease-in-out;
         }
+
+        nav {
+            background-color: #005f99;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffdd57;
+        }
+
         section {
-            margin-top: 20px;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            animation: fadeUp 1s ease-in-out;
         }
+
         h2 {
             color: #005f75;
+            margin-bottom: 15px;
         }
+
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+        }
+
         footer {
-            margin-top: 40px;
             text-align: center;
+            padding: 20px;
+            background-color: #eeeeee;
             font-size: 0.9em;
-            color: #777;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Aire Acondicionado: Información Básica</h1>
+        <h1>Soluciones en Aire Acondicionado</h1>
+        <p>Confort, eficiencia y tecnología para tu espacio</p>
     </header>
 
-    <section>
-        <h2>¿Qué es un aire acondicionado?</h2>
-        <p>El aire acondicionado es un sistema que permite regular la temperatura, humedad y calidad del aire en espacios interiores. Su objetivo principal es proporcionar confort térmico.</p>
+    <nav>
+        <a href="#quees">¿Qué es?</a>
+        <a href="#tipos">Tipos</a>
+        <a href="#consejos">Consejos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="quees">
+        <div class="card">
+            <h2>¿Qué es el aire acondicionado?</h2>
+            <p>El aire acondicionado es un sistema diseñado para controlar la temperatura, humedad y calidad del aire en ambientes cerrados. Es fundamental para mantener el confort y mejorar la calidad de vida en climas extremos.</p>
+        </div>
     </section>
 
-    <section>
-        <h2>Tipos de aire acondicionado</h2>
-        <ul>
-            <li><strong>Split:</strong> Unidad interior y exterior, ideal para hogares.</li>
-            <li><strong>Portátil:</strong> Fácil de mover, no requiere instalación fija.</li>
-            <li><strong>Central:</strong> Sistema más complejo para climatizar grandes espacios.</li>
-        </ul>
+    <section id="tipos">
+        <div class="card">
+            <h2>Tipos de Aire Acondicionado</h2>
+            <ul>
+                <li><strong>Split:</strong> Ideal para habitaciones individuales.</li>
+                <li><strong>Multisplit:</strong> Varios ambientes con una sola unidad exterior.</li>
+                <li><strong>Portátil:</strong> Práctico y sin instalación compleja.</li>
+                <li><strong>Central:</strong> Perfecto para grandes espacios o edificios.</li>
+                <li><strong>Inverter:</strong> Más eficiente y silencioso.</li>
+            </ul>
+        </div>
     </section>
 
-    <section>
-        <h2>Consejos de uso eficiente</h2>
-        <ol>
-            <li>Usar el aire a 24°C para equilibrar confort y consumo.</li>
-            <li>Mantener puertas y ventanas cerradas.</li>
-            <li>Limpiar filtros regularmente.</li>
-        </ol>
+    <section id="consejos">
+        <div class="card">
+            <h2>Consejos para Uso Eficiente</h2>
+            <ol>
+                <li>Programa el termostato entre 24°C y 26°C.</li>
+                <li>Mantén limpios los filtros cada 15 días.</li>
+                <li>Sella ventanas y puertas mientras el equipo esté encendido.</li>
+                <li>Realiza mantenimiento preventivo cada 6 meses.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="card">
+            <h2>Contáctanos</h2>
+            <p>¿Necesitas una instalación o asesoramiento técnico? Escríbenos a:</p>
+            <p><strong>Email:</strong> info@aireconfort.com</p>
+            <p><strong>Teléfono:</strong> +34 912 345 678</p>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Información Climatización. Todos los derechos reservados.</p>
+        &copy; 2025 AireConfort. Todos los derechos reservados.
     </footer>
 
 </body>
